@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
           <logo />
@@ -11,7 +11,8 @@
           class="navbar-burger burger"
           aria-label="menu"
           aria-expanded="false"
-          data-target="navbarBasicExample"
+          data-target="navbar"
+          v-on:click="isActive=!isActive"
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -19,21 +20,20 @@
         </a>
       </div>
 
-      <div id="navbarBasicExample" class="navbar-menu">
+      <div id="navbar" class="navbar-menu" v-bind:class="{'is-active':isActive}">
         <div class="navbar-start">
-          <a
+          <nuxt-link
             class="navbar-item"
             v-for="entry in entries"
-            v-bind:key="entry.text"
-            :href="entry.path">
-                {{entry.text}}
-            </a>
+            :key="entry.text"
+            :to="entry.path"
+          >{{entry.text}}</nuxt-link>
         </div>
 
         <div class="navbar-end"></div>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -48,7 +48,8 @@ export default {
         { text: "About", path: "/" },
         { text: "Soup", path: "/soup" },
         { text: "Blog", path: "/blog" }
-      ]
+      ],
+      isActive: false,
     };
   }
 };
