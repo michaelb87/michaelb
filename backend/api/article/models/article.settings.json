@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "articles",
+  "info": {
+    "name": "article"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "published_at": {
+      "type": "date"
+    },
+    "is_draft": {
+      "type": "boolean",
+      "default": true
+    },
+    "category": {
+      "model": "category",
+      "via": "articles"
+    }
+  }
+}
