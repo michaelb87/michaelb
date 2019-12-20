@@ -1,9 +1,4 @@
 @import 'bulma/sass/utilities/_all.sass';
 
-.test-theme {
-    background-color: orange;
-    .hello-nuxt {
-      color: red;
-    }
-}
+// make sure to import bulma as last line
 @import '~bulma';
