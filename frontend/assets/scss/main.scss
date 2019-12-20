@@ -1,0 +1,9 @@
+@import 'bulma/sass/utilities/_all.sass';
+
+.test-theme {
+    background-color: orange;
+    .hello-nuxt {
+      color: red;
+    }
+}
+@import '~bulma';
