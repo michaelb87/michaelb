@@ -30,7 +30,16 @@
           >{{entry.text}}</nuxt-link>
         </div>
 
-        <div class="navbar-end"></div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-info is-small is-rounded"
+              href="http://twitter.com/biermic" target="_blank">
+                <strong>follow me on <i class="fa fa-twitter"></i></strong>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
@@ -49,7 +58,7 @@ export default {
         { text: "Soup", path: "/soup" },
         { text: "Blog", path: "/blog" }
       ],
-      isActive: false,
+      isActive: false
     };
   }
 };

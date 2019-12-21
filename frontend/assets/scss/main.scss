@@ -1,4 +1,11 @@
 @import 'bulma/sass/utilities/_all.sass';
+$fa-font-path: "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome";
+
+$desktop: 960px + (2 * $gap);
+$widescreen: 960px + (2 * $gap);
+$fullhd-enabled	: false;
 
 // make sure to import bulma as last line
+
 @import '~bulma';

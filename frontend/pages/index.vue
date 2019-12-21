@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <section class="section test-theme">
-      <h1 class="hello-nuxt">Hello world :)</h1>
+      <h1 class="title">Home</h1>
     </section>
   </div>
 </template>
@@ -10,7 +10,4 @@
 export default {};
 </script>
 
-<style lang="scss" scoped>
 
-
-</style>

@@ -1,0 +1,26 @@
+{
+  "connection": "default",
+  "collectionName": "soups",
+  "info": {
+    "name": "soup"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "soup_tags": {
+      "via": "soup",
+      "collection": "soup-tag"
+    }
+  }
+}

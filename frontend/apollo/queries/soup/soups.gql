@@ -1,0 +1,12 @@
+query Soups{
+  soups {
+    id
+    title
+    description
+    url
+    created_at
+    soup_tags {
+      name
+    }
+  }
+}

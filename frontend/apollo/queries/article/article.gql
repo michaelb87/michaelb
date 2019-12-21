@@ -1,0 +1,12 @@
+query{
+  soups(limit: 10, sort: "id:desc", where: {
+    soup_tags: {name: "software_dev"}
+  }) {
+    id
+    title
+    description
+    soup_tags {
+      name
+    }
+  }
+}
