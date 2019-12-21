@@ -10,7 +10,8 @@
       <h6
         class="subtitle is-6 has-text-weight-light"
       >Whenever I encounter something I liked, and that might also provide value for others I'm collecting this here.</h6>
-      <div v-for="soup in soups" :key="soup.id">
+
+      <div v-for="soup in soups" :key="soup.id" class="is-soup">
         <div>
           <a v-bind:href="''+soup.url+''" target="_blank">{{soup.title}}</a>
           <span class="has-text-weight-light is-pulled-right">{{soup.created_at | formatDate}}</span>
@@ -56,3 +57,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  .is-soup {
+    padding-bottom: 2rem;
+  }
+</style>

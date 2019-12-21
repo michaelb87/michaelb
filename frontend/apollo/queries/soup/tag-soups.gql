@@ -1,5 +1,5 @@
 query{
-  soups(limit: 10, sort: "id:desc", where: {
+  soups(limit: 10, sort: "created_at:desc", where: {
     soup_tags: {name: "software_dev"}
   }) {
     id
