@@ -7,7 +7,6 @@
 
       <div v-for="article in articles" :key="article.slug">
         <nuxt-link
-            class="navbar-item"
             v-on:click.native="isActive=false"
             :to="{ name: 'blog-slug', params: {slug: article.slug} }"
           >{{article.title}}</nuxt-link>

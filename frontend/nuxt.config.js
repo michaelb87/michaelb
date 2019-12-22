@@ -47,6 +47,7 @@ export default {
     '@nuxtjs/apollo',
     '@nuxtjs/style-resources',
     '@nuxtjs/markdownit',
+    '@nuxtjs/proxy',
   ],
   apollo: {  
     clientConfigs: {
@@ -61,6 +62,10 @@ export default {
     breaks: true,
     injected: true
   },
+  proxy: [
+      'http://localhost:1337/uploads',
+    ]
+  ,
   /*
   ** Build configuration
   */

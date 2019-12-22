@@ -36,7 +36,7 @@
             <div class="buttons">
               <a class="button is-info is-small is-rounded"
               href="http://twitter.com/biermic" target="_blank">
-                <strong>follow me on <i class="fa fa-twitter"></i></strong>
+                <strong>follow on <i class="fa fa-twitter"></i></strong>
               </a>
             </div>
           </div>
@@ -55,7 +55,7 @@ export default {
   data() {
     return {
       entries: [
-        { text: "About", path: "/" },
+        { text: "About", path: "/about" },
         { text: "Soup", path: "/soup" },
         { text: "Blog", path: "/blog" }
       ],
