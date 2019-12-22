@@ -16,7 +16,8 @@
           <a v-bind:href="''+soup.url+''" target="_blank">{{soup.title}}</a>
           <span class="has-text-weight-light is-pulled-right">{{soup.created_at | formatDate}}</span>
         </div>
-        <div>{{soup.description}}</div>
+
+        <div v-if="soup.description" v-html="$md.render(soup.description)"></div>
         <div>
           <SoupTag
             v-for="souptag in soup.soup_tags"

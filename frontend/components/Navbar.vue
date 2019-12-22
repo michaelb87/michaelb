@@ -24,6 +24,7 @@
         <div class="navbar-start">
           <nuxt-link
             class="navbar-item"
+            v-on:click.native="isActive=false"
             v-for="entry in entries"
             :key="entry.text"
             :to="entry.path"

@@ -1,5 +1,5 @@
-query($slug: String){
-  articles(where: {slug: $slug}) {
+query Article{
+  articles {
     id
     title
     content

@@ -46,6 +46,7 @@ export default {
     //'@nuxtjs/bulma',
     '@nuxtjs/apollo',
     '@nuxtjs/style-resources',
+    '@nuxtjs/markdownit',
   ],
   apollo: {  
     clientConfigs: {
@@ -53,6 +54,12 @@ export default {
         httpEndpoint: process.env.BACKEND_URL || "http://localhost:1337/graphql"
       }
     }
+  },
+  markdownit: {  
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    injected: true
   },
   /*
   ** Build configuration
