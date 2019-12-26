@@ -1,11 +1,11 @@
 <template>
   <div>
-    <img src="~/assets/img/aschach.jpg" @click="isActive = true" />
-    <div class="modal" v-bind:class="{'is-active': isActive}">
+    <img :src="src" @click="isActive = true" />
+    <div class="modal is-active" v-if="isActive">
       <div class="modal-background"></div>
-      <div class="modal-content">
+      <div class="modal-content" v-on-clickaway="deActivate">
         <p class="image is-4by3">
-          <img src="~/assets/img/aschach.jpg" alt />
+          <img :src="src" alt />
         </p>
       </div>
       <button class="modal-close is-large" aria-label="close" @click="isActive = false"></button>
@@ -13,12 +13,19 @@
   </div>
 </template>
 <script>
+import { mixin as clickaway } from "vue-clickaway";
 export default {
   props: ["src"],
+  mixins: [clickaway],
   data: function() {
     return {
       isActive: false
     };
+  },
+  methods: {
+    deActivate(){
+      this.isActive = false
+    }
   }
 };
 </script>

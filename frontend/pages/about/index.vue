@@ -1,29 +1,38 @@
 <template>
   <div class="container">
     <section class="section">
-      <h4 class="subtitle is-4">I'd like to know more</h4>
+      <h4 class="subtitle is-4">If you'd like to know more</h4>
       <div>
-        {{age.years()}} years old software developer living in Austria, right in the middle of Europe.
-        After living 11 years in Vienna - the capital city of Austria - I decided to trade the city life to nature and moved to a small town in the Austrian Alps.
+        So my name is Michael Bierbaumer, a {{age.years()}} years old freelance software developer, living in Austria right in the center of Europe 
+        <span class="icon icon-txt-align">
+          <img class="" src="~/assets/icons/eu.svg" />
+        </span> 
+      </div>
+      <div>
+        After living 11 years in Vienna - the capital city of Austria - I decided to trade the city life to nature and moved 
+        to a small town in the Austrian Alps
+        <span class="icon icon-txt-align">
+          <img class="" src="~/assets/icons/mountain.svg" />
+        </span> 
       </div>
       <div>&nbsp;</div>
       <div class="columns is-vertical-center">
         <div class="column is-two-fifths">
           <figure class="image is-4by3">
-            <img src="~/assets/img/wien.jpg" />
+            <ImgModal v-bind:src="'/img/wien.jpg'"></ImgModal>
           </figure>
         </div>
         <div class="column has-text-centered"><span class="is-size-3">versus</span></div>
         <div class="column is-two-fifths">
             <figure class="image is-4by3">
-            <img src="~/assets/img/aschach.jpg" />
+            <ImgModal v-bind:src="'/img/aschach.jpg'"></ImgModal>
           </figure>
         </div>
       </div>
       <div>&nbsp;</div>
       <div>
 
-          <ImgModal v-bind:src="'test.jpg'"></ImgModal>
+          
 
       </div>
 
