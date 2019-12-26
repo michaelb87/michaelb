@@ -9,5 +9,9 @@ $desktop: 960px + (2 * $gap);
 $widescreen: 960px + (2 * $gap);
 $fullhd-enabled	: false;
 
+@import "navbar.scss";
+@import "helpers.scss";
+@import "about.scss";
+
 // make sure to import bulma as last line
 @import '~bulma';

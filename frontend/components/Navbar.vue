@@ -55,7 +55,7 @@ export default {
   data() {
     return {
       entries: [
-        //{ text: "About", path: "/about" },
+        { text: "About", path: "/about" },
         { text: "Soup", path: "/soup" },
         { text: "Blog", path: "/blog" }
       ],
