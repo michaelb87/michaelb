@@ -35,7 +35,7 @@
           <div class="navbar-item">
             <div class="buttons">
               <a class="button is-info is-small is-rounded"
-              href="http://twitter.com/biermic" target="_blank">
+              href="http://twitter.com/biermic?ref_src=web" target="_blank">
                 <strong>follow on <i class="fa fa-twitter"></i></strong>
               </a>
             </div>
