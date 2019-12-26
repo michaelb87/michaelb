@@ -19,8 +19,9 @@
       "type": "string"
     },
     "soup_tags": {
-      "via": "soup",
-      "collection": "soup-tag"
+      "collection": "soup-tag",
+      "via": "soups",
+      "dominant": true
     }
   }
 }

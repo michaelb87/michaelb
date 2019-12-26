@@ -13,9 +13,9 @@
       "type": "string",
       "unique": true
     },
-    "soup": {
-      "model": "soup",
-      "via": "soup_tags"
+    "soups": {
+      "via": "soup_tags",
+      "collection": "soup"
     }
   }
 }
