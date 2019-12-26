@@ -1,5 +1,5 @@
 query Article{
-  articles {
+  articles(where: {is_draft: false}) {
     id
     title
     content

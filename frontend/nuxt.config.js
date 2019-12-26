@@ -1,4 +1,6 @@
 
+import createBlog from './rss/blog.js'
+
 export default {
   mode: 'universal',
   /*
@@ -48,6 +50,7 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/markdownit',
     '@nuxtjs/proxy',
+    '@nuxtjs/feed',
   ],
   apollo: {  
     clientConfigs: {
@@ -62,6 +65,17 @@ export default {
     breaks: true,
     injected: true
   },
+  feed: [
+    {
+      path: '/feed.xml', // The route to your feed.
+      async create(feed) {
+        await createBlog(feed)
+      },
+      cacheTime: 1, //1000 * 60 * 15, // How long should the feed be cached
+      type: 'rss2', // Can be: rss2, atom1, json1
+      data: [] // Will be passed as 2nd argument to `create` function
+    }
+  ],
   proxy: [
       'http://localhost:1337/uploads',
     ]
