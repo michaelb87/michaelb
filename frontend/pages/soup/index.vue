@@ -9,15 +9,18 @@
       </h3>
       <h6
         class="subtitle is-6 has-text-weight-light"
-      >Whenever I encounter something I liked, and that might also provide value for others I'm collecting this here.</h6>
+      >
+      A random mix of awesome content for entrepreneurs, consultants, and software developers.
+      </h6>
 
       <div v-for="soup in soups" :key="soup.id" class="is-soup">
         <div>
           <a v-bind:href="''+soup.url+''" target="_blank">{{soup.title}}</a>
           <span class="has-text-weight-light is-pulled-right">{{soup.created_at | formatDate}}</span>
         </div>
-
+        <a class="has-text-grey-dark" v-bind:href="''+soup.url+''" target="_blank">
         <div v-if="soup.description" v-html="$md.render(soup.description)"></div>
+        </a>
         <div>
           <SoupTag
             v-for="souptag in soup.soup_tags"

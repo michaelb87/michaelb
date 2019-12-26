@@ -2,7 +2,6 @@ query Article{
   articles(where: {is_draft: false}) {
     id
     title
-    content
     published_at
     slug
     category {

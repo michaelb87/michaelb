@@ -1,5 +1,6 @@
 
 import createBlog from './rss/blog.js'
+import createSoup from './rss/soup.js'
 
 export default {
   mode: 'universal',
@@ -67,14 +68,24 @@ export default {
   },
   feed: [
     {
-      path: '/feed.xml', // The route to your feed.
+      path: '/blog.xml', // The route to your feed.
       async create(feed) {
         await createBlog(feed)
       },
-      cacheTime: 1, //1000 * 60 * 15, // How long should the feed be cached
+      cacheTime: 1000 * 60 * 15, // How long should the feed be cached
       type: 'rss2', // Can be: rss2, atom1, json1
       data: [] // Will be passed as 2nd argument to `create` function
-    }
+    },
+    {
+      path: '/soup.xml', // The route to your feed.
+      async create(feed) {
+        await createSoup(feed)
+      },
+      cacheTime: 1000 * 60 * 15, // How long should the feed be cached
+      type: 'rss2', // Can be: rss2, atom1, json1
+      data: [] // Will be passed as 2nd argument to `create` function
+    },
+
   ],
   proxy: [
       'http://localhost:1337/uploads',

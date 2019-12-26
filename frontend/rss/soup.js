@@ -4,18 +4,18 @@ const md = new MarkdownIt()
 
 export default async function (feed) {
     feed.options = {
-      title: 'Michael Bierbaumer Blog',
+      title: 'Michas Link Soup',
       link: 'https://www.michaelb.dev/blog/feed.xml',
-      description: 'Michas Blog!'
+      description: 'Michael Bierbaumers Blog!'
     }
   
-    const posts = await (axios.get('http://localhost:1337/articles?_limit=15&_sort=published_at:DESC&is_draft_eq=false'))
+    const posts = await (axios.get('http://localhost:1337/soups?_limit=15&_sort=created_at:DESC'))
     posts.data.forEach(post => {
       feed.addItem({
         title: post.title,
-        id: post.slug,
-        link: 'https://www.michaelb.dev/blog/'+post.slug,
-        content: md.render(post.content)
+        id: post.id,
+        link: post.url,
+        content: md.render(post.description)
       })
     })
   
