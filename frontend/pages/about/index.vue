@@ -3,13 +3,13 @@
     <section class="section">
       <h4 class="subtitle is-4">If you'd like to know more</h4>
       <div>
-        So my name is Michael Bierbaumer, a {{age.years()}} years old freelance software developer, living in Austria right in the center of Europe 
+        So my name is Michael Bierbaumer, a {{age.years()}} years old freelance software engineer, living in Austria right in the center of Europe 
         <span class="icon icon-txt-align">
           <img class="" src="~/assets/icons/eu.svg" />
         </span> 
       </div>
       <div>
-        After living 11 years in Vienna - the capital city of Austria - I decided to trade the city life to nature and moved 
+        After living 11 years in Vienna - the capital city of Austria - I decided to <a>trade the city life</a> for nature and moved 
         to a small town in the Austrian Alps
         <span class="icon icon-txt-align">
           <img class="" src="~/assets/icons/mountain.svg" />

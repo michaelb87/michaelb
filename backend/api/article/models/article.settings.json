@@ -30,6 +30,12 @@
       "type": "string",
       "unique": true,
       "required": true
+    },
+    "media": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
     }
   }
 }

@@ -9,9 +9,7 @@
       </h3>
       <h6
         class="subtitle is-6 has-text-weight-light"
-      >
-      A random mix of awesome content for entrepreneurs, consultants, and software developers.
-      </h6>
+      >A random mix of hyperlinks to great content for entrepreneurs, consultants, and software developers.</h6>
 
       <div v-for="soup in soups" :key="soup.id" class="is-soup">
         <div>
@@ -19,7 +17,7 @@
           <span class="has-text-weight-light is-pulled-right">{{soup.created_at | formatDate}}</span>
         </div>
         <a class="has-text-grey-dark" v-bind:href="''+soup.url+''" target="_blank">
-        <div v-if="soup.description" v-html="$md.render(soup.description)"></div>
+          <div v-if="soup.description" v-html="$md.render(soup.description)"></div>
         </a>
         <div>
           <SoupTag
@@ -30,6 +28,10 @@
           ></SoupTag>
         </div>
       </div>
+      <h6 class="subtitle is-6">
+        Get latest soups via
+        <a href="/soup.xml">RSS 2.0</a>
+      </h6>
     </section>
   </div>
 </template>
@@ -63,7 +65,7 @@ export default {
 </script>
 
 <style scoped>
-  .is-soup {
-    padding-bottom: 2rem;
-  }
+.is-soup {
+  padding-bottom: 2rem;
+}
 </style>
