@@ -53,14 +53,14 @@ export default {
     '@nuxtjs/proxy',
     '@nuxtjs/feed',
   ],
-  apollo: {  
+  apollo: {
     clientConfigs: {
       default: {
         httpEndpoint: process.env.BACKEND_URL || "http://localhost:1337/graphql"
       }
     }
   },
-  markdownit: {  
+  markdownit: {
     preset: 'default',
     linkify: true,
     breaks: true,
@@ -87,9 +87,18 @@ export default {
     },
 
   ],
+  router: {
+    extendRoutes(routes, resolve) {
+      const index = routes.findIndex(route => route.name === 'index')
+      routes[index] = {
+        ...routes[index],
+        redirect: {name: 'about'},
+      }
+    }
+  },
   proxy: [
-      'http://localhost:1337/uploads',
-    ]
+    'http://localhost:1337/uploads',
+  ]
   ,
   /*
   ** Build configuration
@@ -105,7 +114,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
     }
   }
 }
