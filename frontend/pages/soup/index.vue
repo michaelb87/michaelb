@@ -89,8 +89,16 @@ export default {
           if (fetchMoreResult.soups.length < pageSize) {
             this.showMoreButton = false;
           }
+          return {
+            soups: this.soups
+          }
         }
       });
+    }
+  },
+  mounted: function() {
+    if(this.start == 0) {
+      this.start = this.soups ? this.soups.length : 0
     }
   }
 };

@@ -9,7 +9,7 @@ export default async function (feed) {
       description: 'Michas Blog!'
     }
   
-    const posts = await (axios.get('http://localhost:1337/articles?_limit=15&_sort=published_at:DESC&is_draft_eq=false'))
+    const posts = await (axios.get('http://localhost:1337/articles?_limit=10&_sort=published_at:DESC&is_draft_eq=false'))
     posts.data.forEach(post => {
       feed.addItem({
         title: post.title,

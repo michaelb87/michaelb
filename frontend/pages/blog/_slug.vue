@@ -7,6 +7,10 @@
       
       <div v-if="article.content" id="editor" v-html="md(article.content)"></div>
 
+      <div class="column has-text-centered">
+        <a href="/blog/" class="button is-small is-light">go back</a>
+      </div>
+
     </section>
   </div>
 </template>

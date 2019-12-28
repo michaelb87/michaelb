@@ -9,7 +9,7 @@ export default async function (feed) {
       description: 'Michael Bierbaumers Blog!'
     }
   
-    const posts = await (axios.get('http://localhost:1337/soups?_limit=15&_sort=created_at:DESC'))
+    const posts = await (axios.get('http://localhost:1337/soups?_limit=10&_sort=created_at:DESC'))
     posts.data.forEach(post => {
       feed.addItem({
         title: post.title,
