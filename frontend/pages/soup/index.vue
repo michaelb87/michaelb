@@ -28,9 +28,16 @@
           ></SoupTag>
         </div>
       </div>
+
+      <div class="column has-text-centered">
+        <button v-if="showMoreButton" @click="showMore" class="button is-small is-dark">load more..</button>
+      </div>
+
       <h6 class="subtitle is-6">
         Get latest soups via
-        <a href="/soup.xml" class="tag"><i class="fa fa-rss"></i>&nbsp; RSS 2.0</a>
+        <a href="/soup.xml" class="tag">
+          <i class="fa fa-rss"></i>&nbsp; RSS 2.0
+        </a>
       </h6>
     </section>
   </div>
@@ -40,6 +47,8 @@
 import soupsQuery from "~/apollo/queries/soup/soups.gql";
 import SoupTag from "~/components/SoupTag.vue";
 import moment from "moment";
+
+const pageSize = 10;
 
 export default {
   components: {
@@ -52,13 +61,36 @@ export default {
   },
   data() {
     return {
-      soups: []
+      soups: [],
+      start: 0,
+      showMoreButton: true
     };
   },
   apollo: {
     soups: {
       prefetch: true,
-      query: soupsQuery
+      query: soupsQuery,
+      variables: {
+        start: 0,
+        limit: pageSize
+      }
+    }
+  },
+  methods: {
+    showMore() {
+      this.start += this.start + pageSize;
+      this.$apollo.queries.soups.fetchMore({
+        variables: {
+          start: this.start,
+          limit: pageSize
+        },
+        updateQuery: (previousResult, { fetchMoreResult }) => {
+          this.soups = [...this.soups, ...fetchMoreResult.soups];
+          if (fetchMoreResult.soups.length < pageSize) {
+            this.showMoreButton = false;
+          }
+        }
+      });
     }
   }
 };

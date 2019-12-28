@@ -1,5 +1,5 @@
-query Soups{
-  soups(sort: "created_at:desc",) {
+query Soups($start: Int!, $limit: Int!){
+  soups(sort: "created_at:desc", start: $start, limit: $limit) {
     id
     title
     description

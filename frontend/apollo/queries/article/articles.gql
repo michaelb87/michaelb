@@ -1,5 +1,5 @@
 query Article{
-  articles(where: {is_draft: false}) {
+  articles(where: {is_draft: false}, sort: "published_at:desc") {
     id
     title
     published_at
