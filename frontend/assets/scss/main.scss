@@ -11,7 +11,7 @@ $fullhd-enabled	: false;
 
 @import "navbar.scss";
 @import "helpers.scss";
-@import "about.scss";
+@import "mobile.scss";
 
 // make sure to import bulma as last line
 @import '~bulma';

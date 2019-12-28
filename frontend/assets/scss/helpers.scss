@@ -1,9 +1,24 @@
+//page centering helpers
+
 .is-vertical-center {
   -webkit-box-align: center;
-     -ms-flex-align: center;
-        align-items: center;
-  }
+  -ms-flex-align: center;
+  align-items: center;
+}
+.h-center-content {
+  margin: auto;
+}
 
-  .icon-txt-align {
-    vertical-align: top
+// icon helpers
+
+.icon-txt-align {
+  vertical-align: top;
+}
+.icon-rounded {
+  border-radius: 4px;
+}
+
+
+.pointer-cursor {
+  cursor: pointer;
 }
