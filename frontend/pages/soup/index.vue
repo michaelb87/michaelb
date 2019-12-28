@@ -30,7 +30,7 @@
       </div>
       <h6 class="subtitle is-6">
         Get latest soups via
-        <a href="/soup.xml">RSS 2.0</a>
+        <a href="/soup.xml" class="tag"><i class="fa fa-rss"></i>&nbsp; RSS 2.0</a>
       </h6>
     </section>
   </div>

@@ -16,7 +16,7 @@
     <section>
       <h6 class="subtitle is-6">
         Get latest blog articles via
-        <a href="/blog.xml">RSS 2.0</a>
+        <a href="/blog.xml" class="tag"><i class="fa fa-rss"></i>&nbsp; RSS 2.0</a>
       </h6>
     </section>
   </div>
