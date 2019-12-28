@@ -2,7 +2,7 @@
   "defaultConnection": "default",
   "connections": {
     "default": {
-      "connector": "bookshelf",
+      "connector": "${process.env.DATABASE_CONNECTOR || 'bookshelf'}",
       "settings": {
         "client": "${process.env.DATABASE_CLIENT || 'sqlite'}",
         "host": "${process.env.DATABASE_HOST || '127.0.0.1'}",
