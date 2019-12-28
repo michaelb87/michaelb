@@ -64,3 +64,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.nuxt-link-active {
+    color: hsl(217, 71%, 53%)	!important;
+}
+</style>

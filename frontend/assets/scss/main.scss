@@ -4,6 +4,9 @@
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
 
+//hl.js
+@import 'highlight.js/scss/github';
+
 // Variables
 $desktop: 960px + (2 * $gap);
 $widescreen: 960px + (2 * $gap);
