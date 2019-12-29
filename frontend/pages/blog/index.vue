@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <section class="section test-theme">
+    <section class="section">
       <h1 class="title">
         <span>Blog</span>
       </h1>

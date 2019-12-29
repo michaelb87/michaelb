@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <section class="section" v-for="article in articles" :key="article.id">
-      <h1 class="title">
+    <section class="section article" v-for="article in articles" :key="article.id">
+      <h1 class="title is-2">
         <span>{{article.title}}</span>
       </h1>
 

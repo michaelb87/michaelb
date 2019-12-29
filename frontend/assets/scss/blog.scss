@@ -1,0 +1,22 @@
+.article {
+    h1 {
+        @extend .title;
+        @extend .is-3;
+    }
+    h2 {
+        @extend .title;
+        @extend .is-3;
+        @extend .subtitle;
+    }
+    h3 {
+        @extend .title;
+        @extend .is-4;
+        @extend .subtitle;
+    }
+
+    h4 { 
+        @extend .title;
+        @extend .is-5;
+        @extend .subtitle;
+    }
+}
