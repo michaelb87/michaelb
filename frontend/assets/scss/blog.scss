@@ -5,8 +5,7 @@
     }
     h2 {
         @extend .title;
-        @extend .is-3;
-        @extend .subtitle;
+        @extend .is-4;
     }
     h3 {
         @extend .title;
@@ -17,6 +16,5 @@
     h4 { 
         @extend .title;
         @extend .is-5;
-        @extend .subtitle;
     }
 }

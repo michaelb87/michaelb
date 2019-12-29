@@ -21,7 +21,10 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: {
+    color: '#3273dc',
+    height: '3px'
+  },
   /*
   ** Global CSS
   */
@@ -92,7 +95,7 @@ export default {
       const index = routes.findIndex(route => route.name === 'index')
       routes[index] = {
         ...routes[index],
-        redirect: {name: 'about'},
+        redirect: { name: 'about' },
       }
     }
   },

@@ -16,6 +16,7 @@ $fullhd-enabled	: false;
 @import "helpers.scss";
 @import "mobile.scss";
 @import "blog.scss";
+@import "spacing.scss";
 
 // make sure to import bulma as last line
 @import '~bulma';

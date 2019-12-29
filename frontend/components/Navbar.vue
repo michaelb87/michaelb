@@ -48,6 +48,7 @@
 
 <script>
 import Logo from "~/components/Logo.vue";
+import colors from 'bulma/sass/utilities/_all.sass';
 export default {
   components: {
     Logo
@@ -67,6 +68,6 @@ export default {
 
 <style scoped>
 .nuxt-link-active {
-    color: hsl(217, 71%, 53%)	!important;
+    color: #3273dc !important;
 }
 </style>
